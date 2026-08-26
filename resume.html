@@ -3,54 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vikky Kumar - Resume</title>
+<meta name="description" content="Vikky Kumar - Full Stack Developer Resume">
+<title>Vikky Kumar | Full Stack Developer Resume</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Arial,Helvetica,sans-serif;color:#222}.resume{max-width:850px;margin:24px auto;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}.header{background:#e9e7f2;padding:24px 34px 20px}.header h1{margin:0 0 12px;font-size:27px;font-weight:700}.contact-row{display:flex;gap:28px;flex-wrap:wrap;font-size:12px;line-height:1.5}.contact-row div{min-width:180px}.linkedin{margin-top:7px}.linkedin a,.link{color:#222;text-decoration:none}.content{padding:0 34px 28px}.section{margin-top:18px}.section-title{font-size:15px;font-weight:700;margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid #5e5873;letter-spacing:.2px}.summary{font-size:11.5px;line-height:1.45;color:#555;margin:0}.job{margin:12px 0 16px}.job-head,.project-head,.achievement-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.job-title,.project-title,.achievement-title{font-size:12px;font-weight:700}.company{color:#5e5873}.date{font-size:10.5px;color:#666;white-space:nowrap}.job p,.job li,.project li,.achievement p{font-size:10.8px;line-height:1.38;color:#555}.job p{margin:5px 0}.job ul,.project ul{margin:4px 0 0;padding-left:17px}.project{margin:12px 0}.tech{font-size:10.5px;color:#555;margin:5px 0}.education-item{margin:10px 0}.degree{font-size:11.8px;font-weight:700}.university{font-size:11px;color:#5e5873;font-weight:700;margin-top:2px}.education-date{font-size:10.5px;color:#666;float:right}.skills{font-size:10.8px;color:#555;line-height:1.55}.skill-label{font-weight:700;color:#444;margin-top:3px}.achievement p{margin:5px 0}.section:last-child{margin-bottom:4px}@media(max-width:650px){.resume{margin:0;box-shadow:none}.header,.content{padding-left:20px;padding-right:20px}.contact-row{gap:8px}.job-head,.project-head,.achievement-head{display:block}.date{margin-top:2px}.education-date{float:none;display:block}}
+:root{--accent:#5f5876;--accent-light:#ebe9f2;--text:#252525;--muted:#5f5f5f;--line:#d9d7df}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4f4f6;color:var(--text);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+.page{width:min(900px,100%);margin:28px auto;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.10);min-height:1120px}
+.header{background:var(--accent-light);padding:30px 38px 24px;border-top:6px solid var(--accent)}
+h1{font-size:30px;line-height:1.1;margin:0 0 7px;letter-spacing:.2px}
+.role{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:16px}
+.contact{display:flex;flex-wrap:wrap;gap:7px 24px;font-size:11.5px;line-height:1.5;color:#3e3e3e}
+.contact a{color:#3e3e3e;text-decoration:none}.contact a:hover{text-decoration:underline}
+.content{padding:0 38px 34px}
+.section{margin-top:21px}.title{font-size:14px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin:0 0 9px;padding-bottom:6px;border-bottom:1.5px solid var(--accent);color:#29272f}
+.summary{font-size:11.4px;line-height:1.55;color:var(--muted);margin:0;text-align:justify}
+.job,.project{margin:0 0 17px}.head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.job-title,.project-title{font-size:12.5px;font-weight:700;line-height:1.35}.company{color:var(--accent)}.date{font-size:10.5px;color:#666;white-space:nowrap;text-align:right}
+.desc,.job li,.project li,.achievement p{font-size:10.8px;line-height:1.48;color:var(--muted)}.desc{margin:5px 0 3px}.job ul,.project ul{margin:4px 0 0;padding-left:18px}.job li,.project li{margin:2px 0}
+.tech{display:flex;flex-wrap:wrap;gap:5px;margin:7px 0}.tag{font-size:9.5px;padding:3px 7px;border:1px solid #d2cfda;border-radius:10px;color:#4d4960;background:#faf9fc}
+.education{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu{padding:11px 13px;border:1px solid var(--line);border-radius:6px}.degree{font-size:11.5px;font-weight:700;line-height:1.4}.uni{font-size:10.8px;color:var(--accent);font-weight:700;margin:4px 0 2px}.edu-date{font-size:10px;color:#666}
+.skills{display:grid;grid-template-columns:90px 1fr;gap:7px 12px;font-size:10.8px;line-height:1.5;color:var(--muted)}.skill-label{font-weight:700;color:#333}
+.achievement{padding:11px 13px;border-left:3px solid var(--accent);background:#faf9fc}.achievement p{margin:5px 0 0}
+.actions{position:fixed;right:24px;bottom:24px;display:flex;gap:8px}.btn{border:0;border-radius:22px;padding:10px 16px;background:var(--accent);color:#fff;text-decoration:none;font-size:12px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15)}.btn.secondary{background:#fff;color:var(--accent);border:1px solid #c9c5d3}
+@media(max-width:700px){body{background:#fff}.page{margin:0;box-shadow:none;min-height:0}.header{padding:25px 22px 20px}.content{padding:0 22px 30px}.head{display:block}.date{text-align:left;margin-top:3px}.education{grid-template-columns:1fr}.contact{gap:5px 14px}.summary{text-align:left}.actions{right:14px;bottom:14px}}
+@media print{body{background:#fff}.page{width:100%;margin:0;box-shadow:none}.actions{display:none}.header{print-color-adjust:exact;-webkit-print-color-adjust:exact}.tag,.achievement,.edu{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 </style>
 </head>
 <body>
-<div class="resume">
-<div class="header">
+<main class="page">
+<header class="header">
 <h1>Vikky Kumar</h1>
-<div class="contact-row">
-<div>✉ vicky.patel88048@gmail.com</div><div>☎ 8804820605</div><div>⌖ Delhi NCR, India Pincode-110059</div>
+<div class="role">Full Stack Developer</div>
+<div class="contact">
+<span>✉ <a href="mailto:vicky.patel88048@gmail.com">vicky.patel88048@gmail.com</a></span>
+<span>☎ <a href="tel:+918804820605">8804820605</a></span>
+<span>⌖ Delhi NCR, India · 110059</span>
+<span>in <a href="https://www.linkedin.com/in/vikky-kumar-9b2692193/" target="_blank" rel="noopener">linkedin.com/in/vikky-kumar-9b2692193/</a></span>
+<span>⌂ <a href="https://vickypatel88048.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a></span>
 </div>
-<div class="linkedin">in&nbsp; <a href="https://www.linkedin.com/in/vikky-kumar-9b2692193/" target="_blank">linkedin.com/in/vikky-kumar-9b2692193/</a></div>
-</div>
+</header>
+
 <div class="content">
+<section class="section">
+<h2 class="title">Professional Summary</h2>
+<p class="summary">Results-driven Full Stack Developer with experience building scalable web applications for business and education sectors. Proficient in HTML, CSS, React.js, JavaScript, Laravel, and MySQL, with strong focus on performance and user experience. Skilled in end-to-end development and project execution. Seeking to leverage technical and leadership skills in consulting and business-focused roles.</p>
+</section>
 
-<div class="section"><h2 class="section-title">Professional Summary</h2>
-<p class="summary">Results-driven Full Stack Developer with experience building scalable web applications for business and education sectors. Proficient in HTML, CSS,React.js, JavaScript, Laravel, and MySQL, with strong focus on performance and user experience. Skilled in end-to-end development and project execution. Seeking to leverage technical and leadership skills in consulting and business-focused roles.</p></div>
+<section class="section">
+<h2 class="title">Professional Experience</h2>
+<article class="job">
+<div class="head"><div class="job-title">Web Developer (Consultant) · <span class="company">Awaz Mathematics Institute</span></div><div class="date">Onsite · 2020 - 2020</div></div>
+<p class="desc">Consulted with educational stakeholders to design and implement a comprehensive online learning platform, enhancing student engagement and operational efficiency.</p>
+<ul><li>Developed and deployed a website for online classes, integrating attendance tracking, Q&amp;A forums, comments, and live streaming.</li><li>Collaborated with institute leadership to identify business requirements and translate them into technical solutions.</li><li>Provided ongoing support and training to staff for platform adoption.</li></ul>
+</article>
+<article class="job">
+<div class="head"><div class="job-title">Full Stack Developer · <span class="company">Connect to India Pvt. Ltd.</span></div><div class="date">Remote/Hybrid · 2022 - 2023</div></div>
+<p class="desc">Led end-to-end web development projects for clients in branding and digital promotion, ensuring alignment with business objectives and client expectations.</p>
+<ul><li>Managed frontend and backend development using PHP, MySQL, and modern JavaScript, React.js frameworks.</li><li>Worked closely with clients to gather requirements, propose solutions, and deliver tailored website solutions.</li><li>Contributed to process improvements and best practices for project delivery.</li></ul>
+</article>
+</section>
 
-<div class="section"><h2 class="section-title">Professional Experience</h2>
-<div class="job"><div class="job-head"><div class="job-title">Web Developer (Consultant) · <span class="company">Awaz Mathematics Institute</span></div><div class="date">Onsite · 2020 - 2020</div></div>
-<p>Consulted with educational stakeholders to design and implement a comprehensive online learning platform, enhancing student engagement and operational efficiency.</p>
-<ul><li>Developed and deployed a website for online classes, integrating features such as attendance tracking, Q&amp;A forums, comments, and live streaming.</li><li>Collaborated with institute leadership to identify business requirements and translate them into technical solutions.</li><li>Provided ongoing support and training to staff for platform adoption.</li></ul></div>
+<section class="section">
+<h2 class="title">Projects</h2>
+<article class="project">
+<div class="head"><div class="project-title">Meditation App · <span class="company">GitHub</span></div><div class="date">2021 - 2021</div></div>
+<div class="tech"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span></div>
+<ul><li>Designed and developed a meditation app to promote wellness, featuring guided sessions and progress tracking.</li><li>Applied user-centric design principles to enhance usability and engagement.</li></ul>
+<div class="desc">Repository: <a href="https://github.com/vickypatel88048/Meditation-App" target="_blank" rel="noopener">github.com/vickypatel88048/Meditation-App</a></div>
+</article>
+</section>
 
-<div class="job"><div class="job-head"><div class="job-title">Full Stack Developer · <span class="company">Connect to India Pvt. Ltd.</span></div><div class="date">Remote/Hybrid · 2022 - 2023</div></div>
-<p>Led end-to-end web development projects for clients in branding and digital promotion, ensuring alignment with business objectives and client expectations.</p>
-<ul><li>Managed frontend and backend development using PHP, MySQL, and modern JavaScript,React.js frameworks.</li><li>Worked closely with clients to gather requirements, propose solutions, and deliver tailored website solutions.</li><li>Contributed to process improvements and best practices for project delivery.</li></ul></div>
+<section class="section">
+<h2 class="title">Education</h2>
+<div class="education">
+<div class="edu"><div class="degree">Master in Computer Application · Computer Application</div><div class="uni">Chandigarh University</div><div class="edu-date">Jan 2021 - Jan 2023</div></div>
+<div class="edu"><div class="degree">Bachelor in Computer Application · Computer Application</div><div class="uni">Brabu University</div><div class="edu-date">Jan 2015 - Jan 2018</div></div>
 </div>
+</section>
 
-<div class="section"><h2 class="section-title">Projects</h2>
-<div class="project"><div class="project-head"><div class="project-title">Meditation App · <span class="company">https://github.com/vickypatel88048/Meditation-App.git</span></div><div class="date">2021 - 2021</div></div>
-<div class="tech"><u>HTML</u>&nbsp;&nbsp; <u>CSS</u>&nbsp;&nbsp; <u>JavaScript</u>&nbsp;&nbsp; <u>React.js</u></div>
-<ul><li>Designed and developed a meditation app to promote wellness, featuring guided sessions and progress tracking.</li><li>Applied user-centric design principles to enhance usability and engagement.</li></ul></div></div>
-
-<div class="section"><h2 class="section-title">Education</h2>
-<div class="education-item"><div class="degree">Bachelor in Computer Application · Computer Application · <span class="education-date">Jan 2015 - Jan 2018</span></div><div class="university">Brabu University</div></div>
-<div class="education-item"><div class="degree">Master in Computer Application · Computer Application · <span class="education-date">Jan 2021 - Jan 2023</span></div><div class="university">Chandigarh University</div></div>
+<section class="section">
+<h2 class="title">Skills</h2>
+<div class="skills">
+<div class="skill-label">Frontend</div><div>HTML · CSS · React.js · JavaScript · Bootstrap · jQuery · Tailwind CSS</div>
+<div class="skill-label">Backend</div><div>PHP · Laravel · MySQL · Next.js · Node.js</div>
 </div>
+</section>
 
-<div class="section"><h2 class="section-title">Skills</h2>
-<div class="skills"><div class="skill-label">Frontend</div><div>HTML CSS React.js JavaScript Bootstrap jQuery Tailwind CSS</div><div class="skill-label">Backend</div><div>PHP Laravel MySQL Next.js Node.js</div></div>
+<section class="section">
+<h2 class="title">Achievement</h2>
+<div class="achievement"><div class="head"><div class="job-title">Top Performer in Web Development Projects · <span class="company">Connect to India Pvt. Ltd.</span></div><div class="date">2022</div></div><p>Recognized for delivering high-impact web solutions that improved client digital presence and business outcomes.</p></div>
+</section>
 </div>
-
-<div class="section"><h2 class="section-title">Achievements</h2>
-<div class="achievement-head"><div class="achievement-title">Top Performer in Web Development Projects · <span class="company">Connect to India Pvt. Ltd.</span></div><div class="date">2022 - 2022</div></div>
-<p>Recognized for delivering high-impact web solutions that improved client digital presence and business outcomes.</p>
-</div>
-
-</div></div>
+</main>
+<div class="actions"><button class="btn" onclick="window.print()">Print / Save PDF</button><a class="btn secondary" href="https://vickypatel88048.github.io/portfolio/">Portfolio</a></div>
 </body>
 </html>
